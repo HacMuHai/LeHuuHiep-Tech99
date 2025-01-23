@@ -4,20 +4,21 @@ const Exercise1Page = () => {
   const { Title } = Typography;
   const codeSnippet = `
   var sum_to_n_a = function (n) {
-    if (n < 0) return 0;
+    if (n <= 0) return 0;
     return (n * (n + 1)) / 2;
   };
 
   var sum_to_n_b = function (n: number) {
-    if (n < 0) return 0;
+    if (n <= 0) return 0;
+    let sum = n;
     for (var i = 1; i < n; i++) {
-      n += i;
+      sum += i;
     }
-    return n;
+    return sum;
   };
 
   var sum_to_n_c = function (n) {
-    if (n < 0) return 0;
+    if (n <= 0) return 0;
     return sum_to_n_c(n - 1) + n;
   };
  `;
